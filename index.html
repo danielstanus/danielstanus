@@ -1,146 +1,310 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daniel Calin Stanus - Portfolio</title>
+    <title>Daniel Calin Stanus - Full Stack Developer</title>
     <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.7;
+            background: #0d1117;
+            color: #c9d1d9;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 860px;
             margin: 0 auto;
-            padding: 20px;
-            background-color: #f4f4f4;
         }
         .header {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1rem;
+            background: linear-gradient(135deg, #161b22, #21262d);
+            border: 1px solid #30363d;
+            border-radius: 12px;
+            padding: 36px 40px;
+            margin-bottom: 24px;
         }
-        .section {
-            background-color: #fff;
-            margin: 20px 0;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        .header h1 {
+            font-size: 2rem;
+            color: #e6edf3;
+            margin-bottom: 6px;
         }
-        .section-title {
-            border-bottom: 2px solid #333;
-            padding-bottom: 10px;
-            margin-bottom: 15px;
+        .header .subtitle {
+            font-size: 1.1rem;
+            color: #58a6ff;
+            margin-bottom: 14px;
         }
-        .contact-info {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
+        .header .meta {
+            color: #8b949e;
+            font-size: 0.9rem;
         }
-        .projects a {
-            display: block;
-            color: #0066cc;
+        .header .meta a {
+            color: #58a6ff;
             text-decoration: none;
-            margin-bottom: 5px;
         }
-        .projects a:hover {
-            text-decoration: underline;
+        .header .meta a:hover { text-decoration: underline; }
+        .section {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 10px;
+            padding: 28px 32px;
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            color: #e6edf3;
+            font-size: 1.2rem;
+            border-bottom: 1px solid #30363d;
+            padding-bottom: 10px;
+            margin-bottom: 18px;
+        }
+        .job {
+            margin-bottom: 24px;
+        }
+        .job:last-child { margin-bottom: 0; }
+        .job h3 {
+            color: #e6edf3;
+            font-size: 1rem;
+            margin-bottom: 4px;
+        }
+        .job .period {
+            color: #8b949e;
+            font-size: 0.85rem;
+            margin-bottom: 10px;
+        }
+        .job .period .company {
+            color: #58a6ff;
+            font-weight: 600;
+        }
+        .job ul {
+            list-style: none;
+            padding: 0;
+        }
+        .job ul li {
+            padding: 3px 0 3px 16px;
+            position: relative;
+            color: #c9d1d9;
+            font-size: 0.92rem;
+        }
+        .job ul li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #58a6ff;
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 10px;
+        }
+        .tag {
+            background: #21262d;
+            border: 1px solid #30363d;
+            border-radius: 20px;
+            padding: 2px 10px;
+            font-size: 0.78rem;
+            color: #58a6ff;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        .skill-group h4 {
+            color: #8b949e;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 6px;
+        }
+        .skill-group p {
+            color: #c9d1d9;
+            font-size: 0.9rem;
+        }
+        .edu-item {
+            margin-bottom: 12px;
+        }
+        .edu-item:last-child { margin-bottom: 0; }
+        .edu-item strong { color: #e6edf3; }
+        .edu-item span { color: #8b949e; font-size: 0.85rem; }
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .contact-links a {
+            color: #58a6ff;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+        .contact-links a:hover { text-decoration: underline; }
+        hr { border: none; border-top: 1px solid #30363d; margin: 6px 0 18px; }
+        @media (max-width: 600px) {
+            .skills-grid { grid-template-columns: 1fr; }
+            .header { padding: 24px 20px; }
+            .section { padding: 20px; }
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>Daniel Calin Stanus</h1>
-        <p>Desarrollador Full Stack</p>
-    </div>
+    <div class="container">
 
-    <div class="section">
-        <h2 class="section-title">Datos Personales</h2>
-        <div class="contact-info">
-            <div>
-                <strong>Dirección:</strong> Marqués de Alonso Martínez 11, 3º-4<br>
-                <strong>Localidad:</strong> 28804 - Alcalá de Henares (Madrid)
+        <div class="header">
+            <h1>👋 Daniel Calin Stanus</h1>
+            <p class="subtitle">💻 Full Stack Developer</p>
+            <p class="meta">
+                📍 Madrid, Spain &nbsp;|&nbsp;
+                🌐 <a href="https://danielstanus.github.io" target="_blank">Portfolio</a> &nbsp;|&nbsp;
+                💼 <a href="https://www.linkedin.com/in/daniel-stanus/" target="_blank">LinkedIn</a> &nbsp;|&nbsp;
+                📧 <a href="mailto:stanusdaniel@gmail.com">stanusdaniel@gmail.com</a>
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>🚀 About Me</h2>
+            <p>Full Stack Developer with over <strong style="color:#e6edf3">8 years of professional experience</strong>, specialized in web development, API design, and end-to-end project delivery. Currently at <strong style="color:#58a6ff">Indra Group</strong>, leading the full development of a modern Document Management System to replace a legacy ASP platform.</p>
+        </div>
+
+        <div class="section">
+            <h2>💼 Professional Experience</h2>
+
+            <div class="job">
+                <h3>Full Stack Developer</h3>
+                <p class="period"><span class="company">Indra Group</span> &nbsp;·&nbsp; Jun 2026 – Present &nbsp;·&nbsp; Hybrid, Madrid</p>
+                <ul>
+                    <li>End-to-end development of a new Document Management System, replacing a legacy ASP application.</li>
+                    <li>Frontend built with <strong>React 19</strong>, delivering a modern and intuitive document workflow UI.</li>
+                    <li>Backend REST API developed with <strong>.NET 10 (C#)</strong>, ensuring a scalable and robust architecture.</li>
+                    <li>Deployment and go-live on <strong>IIS</strong> pre-production and production servers.</li>
+                    <li>Integration with the existing corporate portal for full system compatibility.</li>
+                    <li>Planning future improvements to the main platform from which the new module is accessed.</li>
+                </ul>
+                <div class="tags">
+                    <span class="tag">React 19</span>
+                    <span class="tag">.NET 10</span>
+                    <span class="tag">C#</span>
+                    <span class="tag">TypeScript</span>
+                    <span class="tag">REST API</span>
+                    <span class="tag">IIS</span>
+                </div>
             </div>
-            <div>
-                <strong>Teléfono:</strong> 601.602.153<br>
-                <strong>Email:</strong> stanusdaniel@gmail.com
+
+            <hr>
+
+            <div class="job">
+                <h3>Head of IT Department</h3>
+                <p class="period"><span class="company">OnVentanas Energy Saver Windows SL</span> &nbsp;·&nbsp; Feb 2022 – Jun 2026 &nbsp;·&nbsp; Madrid</p>
+                <ul>
+                    <li>Development of mobile applications using <strong>Ionic</strong> and <strong>Angular</strong>.</li>
+                    <li>Design of RESTful APIs with <strong>C# (.NET)</strong> for internal and warehouse management.</li>
+                    <li>Created a C# library for the company's core software (PrefGest).</li>
+                    <li>Integrated factory machinery with internal systems using <strong>XSLT</strong>.</li>
+                    <li>Maintenance and evolution of the company CRM and internal applications.</li>
+                </ul>
+                <div class="tags">
+                    <span class="tag">C#</span>
+                    <span class="tag">.NET</span>
+                    <span class="tag">Ionic</span>
+                    <span class="tag">Angular</span>
+                    <span class="tag">XSLT</span>
+                    <span class="tag">SQL Server</span>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="job">
+                <h3>Full Stack Developer</h3>
+                <p class="period"><span class="company">TPF Ingeniería</span> &nbsp;·&nbsp; Sep 2020 – Feb 2022 &nbsp;·&nbsp; Madrid</p>
+                <ul>
+                    <li>Maintenance and development of internal web modules in PHP and C#.</li>
+                    <li>Migration of applications from Visual Basic 6.0 to C# (.NET).</li>
+                    <li>Development of reporting tools for management.</li>
+                </ul>
+                <div class="tags">
+                    <span class="tag">C#</span>
+                    <span class="tag">PHP</span>
+                    <span class="tag">Visual Basic</span>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="job">
+                <h3>Software Development Intern</h3>
+                <p class="period"><span class="company">Sotec Consulting</span> &nbsp;·&nbsp; Feb 2020 – Aug 2020 &nbsp;·&nbsp; Madrid</p>
+                <ul>
+                    <li>Maintenance of applications for banking and legal clients using ASP.NET.</li>
+                    <li>Frontend development for the e-Time mobile app (time tracking and payroll).</li>
+                </ul>
+                <div class="tags">
+                    <span class="tag">ASP.NET</span>
+                    <span class="tag">Frontend</span>
+                </div>
             </div>
         </div>
-        <p><strong>Fecha de Nacimiento:</strong> 03 de junio de 1993</p>
-    </div>
 
-    <div class="section">
-        <h2 class="section-title">Formación Académica</h2>
-        <ul>
-            <li>
-                <strong>2023 – 2024:</strong> Máster en Desarrollo Ágil de Software para la Web
-                <br>Universidad de Alcalá, Alcalá de Henares, Madrid (España)
-            </li>
-            <li>
-                <strong>2017 – 2022:</strong> Grado en Ingeniería en Sistemas de Información
-                <br>Universidad de Alcalá, Alcalá de Henares, Madrid (España)
-            </li>
-            <li>
-                <strong>2014 – 2016:</strong> Técnico Superior en Desarrollo de Aplicaciones Multiplataforma
-                <br>IES Alonso de Avellaneda, Alcalá de Henares, Madrid (España)
-            </li>
-            <li>
-                <strong>Certificación:</strong> Técnico en prevención de riesgos laborales (50 horas)
-            </li>
-        </ul>
-    </div>
+        <div class="section">
+            <h2>🧠 Technologies & Tools</h2>
+            <div class="skills-grid">
+                <div class="skill-group">
+                    <h4>Languages</h4>
+                    <p>C#, TypeScript, JavaScript, PHP, Python, SQL</p>
+                </div>
+                <div class="skill-group">
+                    <h4>Frontend</h4>
+                    <p>React 19, Angular, Ionic</p>
+                </div>
+                <div class="skill-group">
+                    <h4>Backend</h4>
+                    <p>.NET 10, ASP.NET, Express, Node.js</p>
+                </div>
+                <div class="skill-group">
+                    <h4>Databases</h4>
+                    <p>SQL Server, PostgreSQL, MySQL, MongoDB, Redis</p>
+                </div>
+                <div class="skill-group">
+                    <h4>DevOps & Infra</h4>
+                    <p>Docker, Kubernetes, IIS, Azure, Vercel</p>
+                </div>
+                <div class="skill-group">
+                    <h4>Other</h4>
+                    <p>XSLT, REST APIs, Microservices, DDD, WordPress</p>
+                </div>
+            </div>
+        </div>
 
-    <div class="section">
-        <h2 class="section-title">Experiencia Profesional</h2>
-        <ul>
-            <li>
-                <strong>2022 – Actualidad:</strong> Desarrollador full stack en OnVentanas (C#, VS 6.0)
-            </li>
-            <li>
-                <strong>2020 – 2022:</strong> Desarrollador full stack en TPF Getinsa Euroestudios (PHP, C#)
-            </li>
-            <li>
-                <strong>2020:</strong> Becario como desarrollador en Sotec Consulting (ASP.NET)
-            </li>
-            <li>
-                <strong>2016:</strong> Prácticas como desarrollador web en ANOVA IT CONSULTING (PHP)
-            </li>
-            <li>
-                <strong>2013 – 2022:</strong> Elaboración de páginas web, aplicaciones para iOS y Android. Profesor particular de informática.
-            </li>
-        </ul>
-    </div>
+        <div class="section">
+            <h2>🎓 Education</h2>
+            <div class="edu-item">
+                <strong>Master's in Agile Web Software Development</strong><br>
+                <span>Universidad de Alcalá · 2023 – 2024</span>
+            </div>
+            <div class="edu-item">
+                <strong>Bachelor's in Information Systems Engineering</strong><br>
+                <span>Universidad de Alcalá · 2017 – 2022</span>
+            </div>
+            <div class="edu-item">
+                <strong>Higher Technician in Multiplatform Application Development</strong><br>
+                <span>IES Alonso de Avellaneda · 2014 – 2016</span>
+            </div>
+        </div>
 
-    <div class="section">
-        <h2 class="section-title">Idiomas</h2>
-        <ul>
-            <li><strong>Rumano:</strong> Nativo</li>
-            <li><strong>Español:</strong> C2 (Comprensión, Habla, Expresión Escrita)</li>
-            <li><strong>Inglés:</strong> B1 (Comprensión, Habla, Expresión Escrita)</li>
-        </ul>
-    </div>
+        <div class="section">
+            <h2>🌐 Languages</h2>
+            <p>🇪🇸 Spanish — Native &nbsp;|&nbsp; 🇷🇴 Romanian — Native &nbsp;|&nbsp; 🇬🇧 English — Intermediate</p>
+        </div>
 
-    <div class="section projects">
-        <h2 class="section-title">Proyectos</h2>
-        <h3>Páginas Web</h3>
-        <a href="https://hormieuropa.com/" target="_blank">Hormi Europa</a>
-        <a href="https://betelalcala.com/" target="_blank">Betal Alcala</a>
-        <a href="https://worldchristianradios.com/" target="_blank">World Christian Radios</a>
-        <a href="https://peliculascristianas.es/" target="_blank">Películas Cristianas</a>
-        <a href="https://filmecrestineonline.com/" target="_blank">Filme Crestine Online</a>
+        <div class="section">
+            <h2>📫 Contact</h2>
+            <div class="contact-links">
+                <a href="https://danielstanus.github.io" target="_blank">🌐 Portfolio</a>
+                <a href="https://www.linkedin.com/in/daniel-stanus/" target="_blank">💼 LinkedIn</a>
+                <a href="mailto:stanusdaniel@gmail.com">📧 stanusdaniel@gmail.com</a>
+                <a href="https://github.com/danielstanus" target="_blank">🐙 GitHub</a>
+            </div>
+        </div>
 
-        <h3>Aplicaciones Móviles</h3>
-        <a href="https://play.google.com/store/apps/developer?id=Daniel+Stanus" target="_blank">Google Play Store</a>
-    </div>
-
-    <div class="section">
-        <h2 class="section-title">Otros Datos de Interés</h2>
-        <p>Carnet de conducir, coche propio y disponibilidad para viajar.</p>
-    </div>
-
-    <div class="section">
-        <h2 class="section-title">Perfil Profesional</h2>
-        <p>Enlace a LinkedIn:</p>
-        <a href="https://www.linkedin.com/in/daniel-calin-stanus-1aa6a0b5/" target="_blank">Perfil de LinkedIn</a>
     </div>
 </body>
 </html>
